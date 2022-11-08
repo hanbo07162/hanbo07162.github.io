@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>vue</title>
+    <link href="/2022/11/08/vue/"/>
+    <url>/2022/11/08/vue/</url>
+    
+    <content type="html"><![CDATA[<p>图片: <img src="https://img-home.csdnimg.cn/images/20220524100510.png" alt="Alt"><br>链接: <a href="https://www.bilibili.com/">b站</a></p><hr>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2022/11/07/hello-world/"/>
     <url>/2022/11/07/hello-world/</url>
