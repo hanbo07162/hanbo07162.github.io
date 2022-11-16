@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>proxy跨域代理</title>
+    <link href="/2022/11/16/proxy%E8%B7%A8%E5%9F%9F%E4%BB%A3%E7%90%86/"/>
+    <url>/2022/11/16/proxy%E8%B7%A8%E5%9F%9F%E4%BB%A3%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<h2 id="proxy跨域代理"><a href="#proxy跨域代理" class="headerlink" title="proxy跨域代理"></a>proxy跨域代理</h2><p>主要用于解决后端未配置cros跨域处理<br>我们在前端在vue项目中可以使用proxy代理进行跨域访问<br>#谈谈一下我对proxy代理的理解<br>在我使用proxy代理时我更加感觉它就好比一个中介，当前端进行axios请求时，发现接口不存在，此时这个请求就会交给proxy进行处理，所以我感觉它更像一个中介的存在</p><h2 id="演示如何在vue中使用proxy代理"><a href="#演示如何在vue中使用proxy代理" class="headerlink" title="演示如何在vue中使用proxy代理"></a>演示如何在vue中使用proxy代理</h2><h3 id="首先配置axios"><a href="#首先配置axios" class="headerlink" title="首先配置axios"></a>首先配置axios</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 导入axios</span><br><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;axios&quot;</span>;<br><br><span class="hljs-keyword">const</span> request=axios.<span class="hljs-title function_">create</span>(&#123;<br>    <span class="hljs-comment">// 使用proxy解决跨域的问题 首先将axios请求的接口写成本地接口就不会出现跨域 </span><br>    <span class="hljs-comment">// 等时识别出 接口不存在时候会交给proxy代理接口进行处理</span><br><br>    <span class="hljs-attr">baseURL</span>:<span class="hljs-string">&#x27;http://localhost:8080/&#x27;</span><br>&#125;)<br><span class="hljs-comment">// 共享出去</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> request<br></code></pre></td></tr></table></figure><p><em>baseURL:’<a href="http://localhost:8080/">http://localhost:8080/</a>  配置为本地请求根路径是因为防止出现跨域的问题</em></p><h3 id="在vue-config-js文件中配置proxy"><a href="#在vue-config-js文件中配置proxy" class="headerlink" title="在vue.config.js文件中配置proxy"></a>在vue.config.js文件中配置proxy</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <br>  <span class="hljs-attr">devServer</span>:&#123;<br>    <span class="hljs-attr">proxy</span>:<span class="hljs-string">&#x27;http://www.escook.cn/&#x27;</span>,<br> <br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>这样我们就用proxy跨域代理解决了在后端未进行跨域配置时所出出现的跨域问题</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>proxy</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vue</title>
     <link href="/2022/11/08/vue/"/>
     <url>/2022/11/08/vue/</url>
